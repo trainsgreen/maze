@@ -1,0 +1,17 @@
+Coen,
+I do actually want to publish this as a terminal game in the snap store for Linux. It shows much potential.
+This is a checklist of things that must happen before this can be suitably published. I will help with what
+I can.
+Josh L.
+
+Things to do:
+==================
+[-] Example
+[] Add comments to code so that others can easily follow it
+[] Add movable player
+[] Make launchable by .desktop file
+[] Compile for snap package and publish
+
+Bugs:
+==================
+None Yet
