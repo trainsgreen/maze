@@ -60,44 +60,55 @@ def nwln (l,g):
   # print ("l: ",l)
   # print ("g: ",g)
 
-  while (j < len(lst1)): 
+  while (j < len(lst1)): # Converts coordinates to text
   
     while (k != lst1[j]):
       ch=ch+"_"
       k+=1
   
-    if (j/2 == round(j/2,0)):
+    if (j/2 == round(j/2,0)): # For even numbers, it adds gaps, for odd numbers, it adds walls
       ch=ch+" "
     else:
       ch=ch+"႔"
-#˩
+      # ch=ch+"˩"
+#˩ - Alternate wall character
     j+=1
     k+=1
-  while (k <= l-2):
+  while (k <= l-2): # Some sort of bug fix
     ch=ch+"_"
     k+=1
-  ch=ch+"|"
+  ch=ch+"|" # Adds end wall
 # print (len(ch))
-  print (ch)
- 
+  print (ch) # Dump line to bash
+
+#  ____              
+# |  _ \ _   _ _ __  
+# | |_) | | | | '_ \ 
+# |  _ <| |_| | | | |
+# |_| \_\\__,_|_| |_|
+                   
+# Prints top of the maze
 ch="_v"
 while (len(ch) < s-2):
   ch=ch+"_"
 ch=ch+"^_"
 print (ch)
- 
+
+# Run line generation with ascending number of gaps
 while (i < s/6):
 # print ("i: ",i)
   nwln (s,i+3)
   i+=1
  
 i-=1
- 
+
+# Run line generation with ascending number of gaps
 while (i > -1):
 # print ("i: ",i)
   nwln (s,i+3)
   i-=1
- 
+
+# Prints bottom of maze
 ch="|"
 while (len(ch) < s-1):
   ch=ch+"_"
